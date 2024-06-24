@@ -3,12 +3,11 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <title>HTML Ruby Markup Extensions</title>
-  <meta content="w3c/ED" name="w3c-status">
+  <meta content="ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version d765c696b, updated Fri Mar 8 15:58:52 2024 -0800" name="generator">
+  <meta content="Bikeshed version a1dabb26c, updated Mon Jun 17 15:00:44 2024 -0700" name="generator">
   <link href="https://www.w3.org/TR/html-ruby-extensions/" rel="canonical">
-  <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="13ad959f26cf52e2af7deaa71fb283e939289d06" name="revision">
+  <meta content="4ba004b59d2275e4978c06b498cb759b05d663f8" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -691,7 +690,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">HTML Ruby Markup Extensions</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-05-22">22 May 2024</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-06-24">24 June 2024</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -708,7 +707,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2024 <a href="https://www.w3.org/">World Wide Web Consortium</a> and WHATWG (Apple, Google, Mozilla, Microsoft). <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, and <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> rules apply. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a> </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2024 <a href="https://www.w3.org/">World Wide Web Consortium</a> and WHATWG (Apple, Google, Mozilla, Microsoft). <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, and <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> rules apply. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -725,7 +724,7 @@ to indicate pronunciation or to provide a short annotation.</p>
 	It is provided for discussion only and may change at any moment.
 	Its publication here does not imply endorsement of its contents by W3C.
 	Don’t cite this document other than as work in progress. </p>
-   <p>This document is governed by the <a href="https://www.w3.org/2023/Process-20231103/" id="w3c_process_revision">03 November 2023 W3C Process Document</a>. </p>
+   <p>This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C Process Document</a>. </p>
    <p></p>
    <p>This document is developed
 under the terms of the <a href="https://www.w3.org/2022/02/ruby-agreement">Agreement on HTML Ruby Markup</a> between W3C and the WHATWG.</p>
@@ -839,7 +838,7 @@ Changes</span></a>
 	Moreover, some aspects of it are also not interoperably implemented;
 	yet implementing them would not completely address the remaining use cases.
 	Additionally, these aspects are at odds with the CSS layout model.</p>
-   <p>This specification is written to promote—​and guide implementations of—​an revised and extended model for ruby,
+   <p>This specification is written to promote—​and guide implementations of—​a revised and extended model for ruby,
 	in order to more completely address the needs of ruby on the Web platform.
 	This effort is undertaken with the <a href="https://www.w3.org/2022/02/ruby-agreement">agreement of W3C and the WHATWG</a>.</p>
    <p><a href="#diff-html">Appendix B:
@@ -1375,7 +1374,7 @@ Comparison With The HTML Standard</a> summarizes the main differences,
 <pre lang="ja"><code class="highlight">...<c- p>&lt;</c-><c- f>ruby</c-><c- p>></c->漢<c- p>&lt;</c-><c- f>rb</c-><c- p>></c->字<c- p>&lt;</c-><c- f>rp</c-><c- p>></c->（<c- p>&lt;</c-><c- f>rt</c-><c- p>></c->かん<c- p>&lt;</c-><c- f>rt</c-><c- p>></c->じ<c- p>&lt;</c-><c- f>rp</c-><c- p>></c->）<c- p>&lt;/</c-><c- f>ruby</c-><c- p>></c->...
 </code></pre>
     <p>In user agents that support ruby layout,
-		the rendering ommit the parentheses,
+		the rendering omit the parentheses,
 		but in user agents that do not, the rendering would be:</p>
 <pre lang="ja">...漢字（かんじ）...</pre>
    </div>
