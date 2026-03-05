@@ -28,7 +28,7 @@ td.pass { background: lightgreen; }
 
 <header>
 	<h1>Implementation Report for: HTML Ruby Markup Extensions</h1>
-	<p><time datetime="2026-03-03">03 March 2022</time>
+	<p><time datetime="2026-03-05">05 March 2022</time>
 
      <dl>
       </dd><dt>Latest published version:
@@ -68,11 +68,11 @@ Aspects of the HTML specification not modified nor extended by HTML Ruby Markup 
 and are not reported about here.
 Only those aspects that are directly covered by <a href="https://www.w3.org/TR/html-ruby-extensions/">HTML Ruby Markup Extensions</a> are reported on here.
 
-<p>The <a href="https://github.com/web-platform-tests/wpt/pull/58150">proposed test suite</a> contains 79 tests for mandatory requirements established by <a href="https://www.w3.org/TR/html-ruby-extensions/">HTML Ruby Markup Extensions</a>.
+<p>The <a href="https://github.com/web-platform-tests/wpt/pull/58150">proposed test suite</a> contains 83 tests for mandatory requirements established by <a href="https://www.w3.org/TR/html-ruby-extensions/">HTML Ruby Markup Extensions</a>.
 Specifically:
 <ul>
-	<li>37 tests covering permutations of the allowed syntax for ruby base markup (with or without <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a>, interleaved and tabular markup)
-	<li>38 tests covering uses of the <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rtc"><code>&lt;rtc></code></a> element.
+	<li>39 tests covering permutations of the allowed syntax for ruby base markup (with or without <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a>, interleaved and tabular markup)
+	<li>40 tests covering uses of the <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rtc"><code>&lt;rtc></code></a> element.
 	<li>4 tests covering what the
 <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a>, <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rt"><code>&lt;rt></code></a>, <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rtc"><code>&lt;rtc></code></a>, and <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rp"><code>&lt;rp></code></a> elements represent
 when used outside of <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-ruby"><code>&lt;ruby></code></a>.
@@ -105,7 +105,7 @@ to be tested separately.
 	<li>Kindle Previewer (version: 3.102.0)
 </ul>
 
-<p>All tests pertaining to ruby base markup and <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a> pass in two implementations: Firefox and Kindle.
+<p>All but one tests pertaining to ruby base markup and <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a> pass in two implementations: Firefox and Kindle. One fails in Kindle, but does pass in the three browser implementations: Chrome, Firefox and Safari.
 
 <p>All tests pertaining to the <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rtc"><code>&lt;rtc></code></a> element pass in one implementation: Firefox.
 
@@ -187,6 +187,8 @@ the results reported in this document will not be reproduced.
 			<tr><th>html-ruby-011.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS
 			<tr><th>html-ruby-012.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS
 			<tr><th>html-ruby-013.html<td>FAIL<td class=pass>PASS<td>FAIL<td class=pass>PASS
+			<tr><th>html-ruby-014.html<td>FAIL<td class=pass>PASS<td>FAIL<td class=pass>PASS
+			<tr><th>html-ruby-015.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td>FAIL
 			<tr><th>html-ruby-101.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS
 			<tr><th>html-ruby-102.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS
 			<tr><th>html-ruby-103.html<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS<td class=pass>PASS
@@ -249,9 +251,11 @@ the results reported in this document will not be reproduced.
 			<tr><th>html-ruby-501.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 			<tr><th>html-ruby-502.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 			<tr><th>html-ruby-503.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
+			<tr><th>html-ruby-504.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 			<tr><th>html-ruby-601.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 			<tr><th>html-ruby-602.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 			<tr><th>html-ruby-603.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
+			<tr><th>html-ruby-604.html<td>FAIL<td class=pass>PASS<td>FAIL<td>FAIL
 
 		<tbody>
 			<tr><th colspan=5>Tests for what <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rb"><code>&lt;rb></code></a>, <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rt"><code>&lt;rt></code></a>, <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rtc"><code>&lt;rtc></code></a>, and <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-rp"><code>&lt;rp></code></a> represent when used outside of the <a data-link-type="element" href="https://www.w3.org/TR/html-ruby-extensions/#elementdef-ruby"><code>&lt;ruby></code></a>
